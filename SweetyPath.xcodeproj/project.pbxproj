@@ -7,18 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		86490DC32D64809A005CAD91 /* SweetLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC02D64809A005CAD91 /* SweetLevelView.swift */; };
+		86490DC42D64809A005CAD91 /* SweetLevelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC12D64809A005CAD91 /* SweetLevelModel.swift */; };
+		86490DC52D64809A005CAD91 /* SweetLevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC22D64809A005CAD91 /* SweetLevelViewModel.swift */; };
+		86490DCA2D648962005CAD91 /* SweetSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC72D648962005CAD91 /* SweetSettingsView.swift */; };
+		86490DCB2D648962005CAD91 /* SweetSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC82D648962005CAD91 /* SweetSettingsModel.swift */; };
+		86490DCC2D648962005CAD91 /* SweetSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DC92D648962005CAD91 /* SweetSettingsViewModel.swift */; };
+		86490DD12D64A9F9005CAD91 /* SweetShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DCE2D64A9F9005CAD91 /* SweetShopView.swift */; };
+		86490DD22D64A9F9005CAD91 /* SweetShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DCF2D64A9F9005CAD91 /* SweetShopModel.swift */; };
+		86490DD32D64A9F9005CAD91 /* SweetShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DD02D64A9F9005CAD91 /* SweetShopViewModel.swift */; };
+		86490DD82D64AADA005CAD91 /* SweetBackgroundsShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DD52D64AADA005CAD91 /* SweetBackgroundsShopView.swift */; };
+		86490DD92D64AADA005CAD91 /* SweetBackgroundsShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DD62D64AADA005CAD91 /* SweetBackgroundsShopModel.swift */; };
+		86490DDA2D64AADA005CAD91 /* SweetBackgroundsShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DD72D64AADA005CAD91 /* SweetBackgroundsShopViewModel.swift */; };
+		86490DDF2D64AF7A005CAD91 /* SweetIpgradesShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DDC2D64AF7A005CAD91 /* SweetIpgradesShopView.swift */; };
+		86490DE02D64AF7A005CAD91 /* SweetIpgradesShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DDD2D64AF7A005CAD91 /* SweetIpgradesShopModel.swift */; };
+		86490DE12D64AF7A005CAD91 /* SweetIpgradesShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DDE2D64AF7A005CAD91 /* SweetIpgradesShopViewModel.swift */; };
+		86490DE62D64B72E005CAD91 /* SweetHeartsShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DE32D64B72E005CAD91 /* SweetHeartsShopView.swift */; };
+		86490DE72D64B72E005CAD91 /* SweetHeartsShopModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DE42D64B72E005CAD91 /* SweetHeartsShopModel.swift */; };
+		86490DE82D64B72E005CAD91 /* SweetHeartsShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DE52D64B72E005CAD91 /* SweetHeartsShopViewModel.swift */; };
+		86490DED2D64BD40005CAD91 /* SweetRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DEA2D64BD40005CAD91 /* SweetRecipeView.swift */; };
+		86490DEE2D64BD40005CAD91 /* SweetRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DEB2D64BD40005CAD91 /* SweetRecipeModel.swift */; };
+		86490DEF2D64BD40005CAD91 /* SweetRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DEC2D64BD40005CAD91 /* SweetRecipeViewModel.swift */; };
+		86490DF42D64C3DB005CAD91 /* SweetDetailRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DF12D64C3DB005CAD91 /* SweetDetailRecipeView.swift */; };
+		86490DF52D64C3DB005CAD91 /* SweetDetailRecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DF22D64C3DB005CAD91 /* SweetDetailRecipeModel.swift */; };
+		86490DF62D64C3DB005CAD91 /* SweetDetailRecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DF32D64C3DB005CAD91 /* SweetDetailRecipeViewModel.swift */; };
+		86490DFB2D64CBB0005CAD91 /* SweetGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DF82D64CBB0005CAD91 /* SweetGameView.swift */; };
+		86490DFC2D64CBB0005CAD91 /* SweetGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DF92D64CBB0005CAD91 /* SweetGameModel.swift */; };
+		86490DFD2D64CBB0005CAD91 /* SweetGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86490DFA2D64CBB0005CAD91 /* SweetGameViewModel.swift */; };
+		8650C4882D668FA200791893 /* SweetGameExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8650C4872D668FA200791893 /* SweetGameExtension.swift */; };
 		865E2E112D63CA2C00945243 /* SweetyPathApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E102D63CA2C00945243 /* SweetyPathApp.swift */; };
-		865E2E132D63CA2C00945243 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E122D63CA2C00945243 /* ContentView.swift */; };
 		865E2E152D63CA2D00945243 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865E2E142D63CA2D00945243 /* Assets.xcassets */; };
 		865E2E182D63CA2D00945243 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865E2E172D63CA2D00945243 /* Preview Assets.xcassets */; };
+		865E2E232D63CA7800945243 /* SweetCustomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E222D63CA7800945243 /* SweetCustomButtons.swift */; };
+		865E2E252D63CA7E00945243 /* SweetImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E242D63CA7E00945243 /* SweetImageName.swift */; };
+		865E2E2D2D63CADC00945243 /* SweetLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E2A2D63CADC00945243 /* SweetLoadingView.swift */; };
+		865E2E2E2D63CADC00945243 /* SweetLoadingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E2B2D63CADC00945243 /* SweetLoadingModel.swift */; };
+		865E2E2F2D63CADC00945243 /* SweetLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E2C2D63CADC00945243 /* SweetLoadingViewModel.swift */; };
+		865E2E312D63CB0400945243 /* SweetTextExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E302D63CB0400945243 /* SweetTextExtension.swift */; };
+		865E2E332D63CB1200945243 /* SweetTextOutlineExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E322D63CB1200945243 /* SweetTextOutlineExtension.swift */; };
+		865E2E352D63CB7F00945243 /* BowlbyOneSC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 865E2E342D63CB6D00945243 /* BowlbyOneSC-Regular.ttf */; };
+		865E2E3B2D63CF9900945243 /* SweetMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E382D63CF9900945243 /* SweetMenuView.swift */; };
+		865E2E3C2D63CF9900945243 /* SweetMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E392D63CF9900945243 /* SweetMenuModel.swift */; };
+		865E2E3D2D63CF9900945243 /* SweetMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865E2E3A2D63CF9900945243 /* SweetMenuViewModel.swift */; };
+		8699A4982D670ADD00F6E395 /* SweetRulesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4952D670ADD00F6E395 /* SweetRulesView.swift */; };
+		8699A4992D670ADD00F6E395 /* SweetRulesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4962D670ADD00F6E395 /* SweetRulesModel.swift */; };
+		8699A49A2D670ADD00F6E395 /* SweetRulesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4972D670ADD00F6E395 /* SweetRulesViewModel.swift */; };
+		8699A49F2D670CC400F6E395 /* SweetWinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A49C2D670CC400F6E395 /* SweetWinView.swift */; };
+		8699A4A02D670CC400F6E395 /* SweetWinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A49D2D670CC400F6E395 /* SweetWinModel.swift */; };
+		8699A4A12D670CC400F6E395 /* SweetWinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A49E2D670CC400F6E395 /* SweetWinViewModel.swift */; };
+		8699A4A62D670E5200F6E395 /* SweetLoseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4A32D670E5200F6E395 /* SweetLoseView.swift */; };
+		8699A4A72D670E5200F6E395 /* SweetLoseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4A42D670E5200F6E395 /* SweetLoseModel.swift */; };
+		8699A4A82D670E5200F6E395 /* SweetLoseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4A52D670E5200F6E395 /* SweetLoseViewModel.swift */; };
+		8699A4AD2D670F8C00F6E395 /* SweetPauseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4AA2D670F8C00F6E395 /* SweetPauseView.swift */; };
+		8699A4AE2D670F8C00F6E395 /* SweetPauseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4AB2D670F8C00F6E395 /* SweetPauseModel.swift */; };
+		8699A4AF2D670F8C00F6E395 /* SweetPauseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4AC2D670F8C00F6E395 /* SweetPauseViewModel.swift */; };
+		8699A4B22D671D5600F6E395 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4B12D671D5600F6E395 /* UserDefaultsManager.swift */; };
+		8699A4B62D67321500F6E395 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8699A4B52D67321500F6E395 /* AudioManager.swift */; };
+		8699A4BD2D67427600F6E395 /* lose.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8699A4B92D67427500F6E395 /* lose.mp3 */; };
+		8699A4BE2D67427600F6E395 /* bonus.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8699A4BA2D67427500F6E395 /* bonus.mp3 */; };
+		8699A4BF2D67427600F6E395 /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8699A4BB2D67427500F6E395 /* bg.mp3 */; };
+		8699A4C02D67427600F6E395 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8699A4BC2D67427600F6E395 /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		86490DC02D64809A005CAD91 /* SweetLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLevelView.swift; sourceTree = "<group>"; };
+		86490DC12D64809A005CAD91 /* SweetLevelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLevelModel.swift; sourceTree = "<group>"; };
+		86490DC22D64809A005CAD91 /* SweetLevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLevelViewModel.swift; sourceTree = "<group>"; };
+		86490DC72D648962005CAD91 /* SweetSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSettingsView.swift; sourceTree = "<group>"; };
+		86490DC82D648962005CAD91 /* SweetSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSettingsModel.swift; sourceTree = "<group>"; };
+		86490DC92D648962005CAD91 /* SweetSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetSettingsViewModel.swift; sourceTree = "<group>"; };
+		86490DCE2D64A9F9005CAD91 /* SweetShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetShopView.swift; sourceTree = "<group>"; };
+		86490DCF2D64A9F9005CAD91 /* SweetShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetShopModel.swift; sourceTree = "<group>"; };
+		86490DD02D64A9F9005CAD91 /* SweetShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetShopViewModel.swift; sourceTree = "<group>"; };
+		86490DD52D64AADA005CAD91 /* SweetBackgroundsShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetBackgroundsShopView.swift; sourceTree = "<group>"; };
+		86490DD62D64AADA005CAD91 /* SweetBackgroundsShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetBackgroundsShopModel.swift; sourceTree = "<group>"; };
+		86490DD72D64AADA005CAD91 /* SweetBackgroundsShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetBackgroundsShopViewModel.swift; sourceTree = "<group>"; };
+		86490DDC2D64AF7A005CAD91 /* SweetIpgradesShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetIpgradesShopView.swift; sourceTree = "<group>"; };
+		86490DDD2D64AF7A005CAD91 /* SweetIpgradesShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetIpgradesShopModel.swift; sourceTree = "<group>"; };
+		86490DDE2D64AF7A005CAD91 /* SweetIpgradesShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetIpgradesShopViewModel.swift; sourceTree = "<group>"; };
+		86490DE32D64B72E005CAD91 /* SweetHeartsShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetHeartsShopView.swift; sourceTree = "<group>"; };
+		86490DE42D64B72E005CAD91 /* SweetHeartsShopModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetHeartsShopModel.swift; sourceTree = "<group>"; };
+		86490DE52D64B72E005CAD91 /* SweetHeartsShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetHeartsShopViewModel.swift; sourceTree = "<group>"; };
+		86490DEA2D64BD40005CAD91 /* SweetRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRecipeView.swift; sourceTree = "<group>"; };
+		86490DEB2D64BD40005CAD91 /* SweetRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRecipeModel.swift; sourceTree = "<group>"; };
+		86490DEC2D64BD40005CAD91 /* SweetRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRecipeViewModel.swift; sourceTree = "<group>"; };
+		86490DF12D64C3DB005CAD91 /* SweetDetailRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDetailRecipeView.swift; sourceTree = "<group>"; };
+		86490DF22D64C3DB005CAD91 /* SweetDetailRecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDetailRecipeModel.swift; sourceTree = "<group>"; };
+		86490DF32D64C3DB005CAD91 /* SweetDetailRecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetDetailRecipeViewModel.swift; sourceTree = "<group>"; };
+		86490DF82D64CBB0005CAD91 /* SweetGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetGameView.swift; sourceTree = "<group>"; };
+		86490DF92D64CBB0005CAD91 /* SweetGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetGameModel.swift; sourceTree = "<group>"; };
+		86490DFA2D64CBB0005CAD91 /* SweetGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetGameViewModel.swift; sourceTree = "<group>"; };
+		8650C4872D668FA200791893 /* SweetGameExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetGameExtension.swift; sourceTree = "<group>"; };
 		865E2E0D2D63CA2C00945243 /* SweetyPath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SweetyPath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865E2E102D63CA2C00945243 /* SweetyPathApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetyPathApp.swift; sourceTree = "<group>"; };
-		865E2E122D63CA2C00945243 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		865E2E142D63CA2D00945243 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865E2E172D63CA2D00945243 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		865E2E222D63CA7800945243 /* SweetCustomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetCustomButtons.swift; sourceTree = "<group>"; };
+		865E2E242D63CA7E00945243 /* SweetImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetImageName.swift; sourceTree = "<group>"; };
+		865E2E2A2D63CADC00945243 /* SweetLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoadingView.swift; sourceTree = "<group>"; };
+		865E2E2B2D63CADC00945243 /* SweetLoadingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoadingModel.swift; sourceTree = "<group>"; };
+		865E2E2C2D63CADC00945243 /* SweetLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoadingViewModel.swift; sourceTree = "<group>"; };
+		865E2E302D63CB0400945243 /* SweetTextExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetTextExtension.swift; sourceTree = "<group>"; };
+		865E2E322D63CB1200945243 /* SweetTextOutlineExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetTextOutlineExtension.swift; sourceTree = "<group>"; };
+		865E2E342D63CB6D00945243 /* BowlbyOneSC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BowlbyOneSC-Regular.ttf"; sourceTree = "<group>"; };
+		865E2E362D63CB8500945243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		865E2E382D63CF9900945243 /* SweetMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetMenuView.swift; sourceTree = "<group>"; };
+		865E2E392D63CF9900945243 /* SweetMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetMenuModel.swift; sourceTree = "<group>"; };
+		865E2E3A2D63CF9900945243 /* SweetMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetMenuViewModel.swift; sourceTree = "<group>"; };
+		8699A4952D670ADD00F6E395 /* SweetRulesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRulesView.swift; sourceTree = "<group>"; };
+		8699A4962D670ADD00F6E395 /* SweetRulesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRulesModel.swift; sourceTree = "<group>"; };
+		8699A4972D670ADD00F6E395 /* SweetRulesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetRulesViewModel.swift; sourceTree = "<group>"; };
+		8699A49C2D670CC400F6E395 /* SweetWinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetWinView.swift; sourceTree = "<group>"; };
+		8699A49D2D670CC400F6E395 /* SweetWinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetWinModel.swift; sourceTree = "<group>"; };
+		8699A49E2D670CC400F6E395 /* SweetWinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetWinViewModel.swift; sourceTree = "<group>"; };
+		8699A4A32D670E5200F6E395 /* SweetLoseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoseView.swift; sourceTree = "<group>"; };
+		8699A4A42D670E5200F6E395 /* SweetLoseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoseModel.swift; sourceTree = "<group>"; };
+		8699A4A52D670E5200F6E395 /* SweetLoseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetLoseViewModel.swift; sourceTree = "<group>"; };
+		8699A4AA2D670F8C00F6E395 /* SweetPauseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetPauseView.swift; sourceTree = "<group>"; };
+		8699A4AB2D670F8C00F6E395 /* SweetPauseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetPauseModel.swift; sourceTree = "<group>"; };
+		8699A4AC2D670F8C00F6E395 /* SweetPauseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetPauseViewModel.swift; sourceTree = "<group>"; };
+		8699A4B12D671D5600F6E395 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8699A4B52D67321500F6E395 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		8699A4B92D67427500F6E395 /* lose.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lose.mp3; sourceTree = "<group>"; };
+		8699A4BA2D67427500F6E395 /* bonus.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bonus.mp3; sourceTree = "<group>"; };
+		8699A4BB2D67427500F6E395 /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
+		8699A4BC2D67427600F6E395 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +145,105 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86490DBF2D64808A005CAD91 /* SweetLevelModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DC02D64809A005CAD91 /* SweetLevelView.swift */,
+				86490DC12D64809A005CAD91 /* SweetLevelModel.swift */,
+				86490DC22D64809A005CAD91 /* SweetLevelViewModel.swift */,
+			);
+			path = SweetLevelModule;
+			sourceTree = "<group>";
+		};
+		86490DC62D648957005CAD91 /* SweetSettingsModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DC72D648962005CAD91 /* SweetSettingsView.swift */,
+				86490DC82D648962005CAD91 /* SweetSettingsModel.swift */,
+				86490DC92D648962005CAD91 /* SweetSettingsViewModel.swift */,
+			);
+			path = SweetSettingsModule;
+			sourceTree = "<group>";
+		};
+		86490DCD2D64A9EF005CAD91 /* SweetShopModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DCE2D64A9F9005CAD91 /* SweetShopView.swift */,
+				86490DCF2D64A9F9005CAD91 /* SweetShopModel.swift */,
+				86490DD02D64A9F9005CAD91 /* SweetShopViewModel.swift */,
+			);
+			path = SweetShopModule;
+			sourceTree = "<group>";
+		};
+		86490DD42D64AACC005CAD91 /* SweetBackgroundsShopModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DD52D64AADA005CAD91 /* SweetBackgroundsShopView.swift */,
+				86490DD62D64AADA005CAD91 /* SweetBackgroundsShopModel.swift */,
+				86490DD72D64AADA005CAD91 /* SweetBackgroundsShopViewModel.swift */,
+			);
+			path = SweetBackgroundsShopModule;
+			sourceTree = "<group>";
+		};
+		86490DDB2D64AF65005CAD91 /* SweetUpgradesShopModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DDC2D64AF7A005CAD91 /* SweetIpgradesShopView.swift */,
+				86490DDD2D64AF7A005CAD91 /* SweetIpgradesShopModel.swift */,
+				86490DDE2D64AF7A005CAD91 /* SweetIpgradesShopViewModel.swift */,
+			);
+			path = SweetUpgradesShopModule;
+			sourceTree = "<group>";
+		};
+		86490DE22D64B722005CAD91 /* SweetHeartsShopModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DE32D64B72E005CAD91 /* SweetHeartsShopView.swift */,
+				86490DE42D64B72E005CAD91 /* SweetHeartsShopModel.swift */,
+				86490DE52D64B72E005CAD91 /* SweetHeartsShopViewModel.swift */,
+			);
+			path = SweetHeartsShopModule;
+			sourceTree = "<group>";
+		};
+		86490DE92D64BD33005CAD91 /* SweetRecipeModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DEA2D64BD40005CAD91 /* SweetRecipeView.swift */,
+				86490DEB2D64BD40005CAD91 /* SweetRecipeModel.swift */,
+				86490DEC2D64BD40005CAD91 /* SweetRecipeViewModel.swift */,
+			);
+			path = SweetRecipeModule;
+			sourceTree = "<group>";
+		};
+		86490DF02D64C3CB005CAD91 /* SweetDetailRecipeModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DF12D64C3DB005CAD91 /* SweetDetailRecipeView.swift */,
+				86490DF22D64C3DB005CAD91 /* SweetDetailRecipeModel.swift */,
+				86490DF32D64C3DB005CAD91 /* SweetDetailRecipeViewModel.swift */,
+			);
+			path = SweetDetailRecipeModule;
+			sourceTree = "<group>";
+		};
+		86490DF72D64CBA6005CAD91 /* SweetGameModule */ = {
+			isa = PBXGroup;
+			children = (
+				86490DF82D64CBB0005CAD91 /* SweetGameView.swift */,
+				86490DF92D64CBB0005CAD91 /* SweetGameModel.swift */,
+				86490DFA2D64CBB0005CAD91 /* SweetGameViewModel.swift */,
+				8650C4862D668F8900791893 /* SweetGameSpriteKit */,
+			);
+			path = SweetGameModule;
+			sourceTree = "<group>";
+		};
+		8650C4862D668F8900791893 /* SweetGameSpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				8650C4872D668FA200791893 /* SweetGameExtension.swift */,
+			);
+			path = SweetGameSpriteKit;
+			sourceTree = "<group>";
+		};
 		865E2E042D63CA2C00945243 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +263,26 @@
 		865E2E0F2D63CA2C00945243 /* SweetyPath */ = {
 			isa = PBXGroup;
 			children = (
+				865E2E362D63CB8500945243 /* Info.plist */,
 				865E2E102D63CA2C00945243 /* SweetyPathApp.swift */,
-				865E2E122D63CA2C00945243 /* ContentView.swift */,
+				8699A4A92D670F8100F6E395 /* SweetPauseModule */,
+				8699A4A22D670E4700F6E395 /* SweetLoseModule */,
+				8699A49B2D670CB800F6E395 /* SweetWinModule */,
+				8699A4942D670AD300F6E395 /* SweetRulesModule */,
+				86490DF72D64CBA6005CAD91 /* SweetGameModule */,
+				86490DF02D64C3CB005CAD91 /* SweetDetailRecipeModule */,
+				86490DE92D64BD33005CAD91 /* SweetRecipeModule */,
+				86490DE22D64B722005CAD91 /* SweetHeartsShopModule */,
+				86490DDB2D64AF65005CAD91 /* SweetUpgradesShopModule */,
+				86490DD42D64AACC005CAD91 /* SweetBackgroundsShopModule */,
+				86490DCD2D64A9EF005CAD91 /* SweetShopModule */,
+				86490DC62D648957005CAD91 /* SweetSettingsModule */,
+				86490DBF2D64808A005CAD91 /* SweetLevelModule */,
+				865E2E372D63CF8C00945243 /* SweetMenuModule */,
+				865E2E292D63CAD200945243 /* SweetLoadingModule */,
+				865E2E262D63CAA900945243 /* SweetExtensions */,
+				865E2E1E2D63CA5C00945243 /* SweetHelpers */,
+				8699A4B32D67320200F6E395 /* API */,
 				865E2E142D63CA2D00945243 /* Assets.xcassets */,
 				865E2E162D63CA2D00945243 /* Preview Content */,
 			);
@@ -65,6 +295,170 @@
 				865E2E172D63CA2D00945243 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		865E2E1E2D63CA5C00945243 /* SweetHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E202D63CA6700945243 /* SweetFont */,
+				865E2E1F2D63CA6300945243 /* SweetImageName */,
+				865E2E212D63CA6B00945243 /* SweetCustomButtons */,
+			);
+			path = SweetHelpers;
+			sourceTree = "<group>";
+		};
+		865E2E1F2D63CA6300945243 /* SweetImageName */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E242D63CA7E00945243 /* SweetImageName.swift */,
+			);
+			path = SweetImageName;
+			sourceTree = "<group>";
+		};
+		865E2E202D63CA6700945243 /* SweetFont */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E342D63CB6D00945243 /* BowlbyOneSC-Regular.ttf */,
+			);
+			path = SweetFont;
+			sourceTree = "<group>";
+		};
+		865E2E212D63CA6B00945243 /* SweetCustomButtons */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E222D63CA7800945243 /* SweetCustomButtons.swift */,
+			);
+			path = SweetCustomButtons;
+			sourceTree = "<group>";
+		};
+		865E2E262D63CAA900945243 /* SweetExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E272D63CAB600945243 /* SweetTextOutlineExtension */,
+				865E2E282D63CAC600945243 /* SweetTextExtension */,
+			);
+			path = SweetExtensions;
+			sourceTree = "<group>";
+		};
+		865E2E272D63CAB600945243 /* SweetTextOutlineExtension */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E322D63CB1200945243 /* SweetTextOutlineExtension.swift */,
+			);
+			path = SweetTextOutlineExtension;
+			sourceTree = "<group>";
+		};
+		865E2E282D63CAC600945243 /* SweetTextExtension */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E302D63CB0400945243 /* SweetTextExtension.swift */,
+			);
+			path = SweetTextExtension;
+			sourceTree = "<group>";
+		};
+		865E2E292D63CAD200945243 /* SweetLoadingModule */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E2A2D63CADC00945243 /* SweetLoadingView.swift */,
+				865E2E2B2D63CADC00945243 /* SweetLoadingModel.swift */,
+				865E2E2C2D63CADC00945243 /* SweetLoadingViewModel.swift */,
+			);
+			path = SweetLoadingModule;
+			sourceTree = "<group>";
+		};
+		865E2E372D63CF8C00945243 /* SweetMenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				865E2E382D63CF9900945243 /* SweetMenuView.swift */,
+				865E2E392D63CF9900945243 /* SweetMenuModel.swift */,
+				865E2E3A2D63CF9900945243 /* SweetMenuViewModel.swift */,
+			);
+			path = SweetMenuModule;
+			sourceTree = "<group>";
+		};
+		8699A4942D670AD300F6E395 /* SweetRulesModule */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4952D670ADD00F6E395 /* SweetRulesView.swift */,
+				8699A4962D670ADD00F6E395 /* SweetRulesModel.swift */,
+				8699A4972D670ADD00F6E395 /* SweetRulesViewModel.swift */,
+			);
+			path = SweetRulesModule;
+			sourceTree = "<group>";
+		};
+		8699A49B2D670CB800F6E395 /* SweetWinModule */ = {
+			isa = PBXGroup;
+			children = (
+				8699A49C2D670CC400F6E395 /* SweetWinView.swift */,
+				8699A49D2D670CC400F6E395 /* SweetWinModel.swift */,
+				8699A49E2D670CC400F6E395 /* SweetWinViewModel.swift */,
+			);
+			path = SweetWinModule;
+			sourceTree = "<group>";
+		};
+		8699A4A22D670E4700F6E395 /* SweetLoseModule */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4A32D670E5200F6E395 /* SweetLoseView.swift */,
+				8699A4A42D670E5200F6E395 /* SweetLoseModel.swift */,
+				8699A4A52D670E5200F6E395 /* SweetLoseViewModel.swift */,
+			);
+			path = SweetLoseModule;
+			sourceTree = "<group>";
+		};
+		8699A4A92D670F8100F6E395 /* SweetPauseModule */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4AA2D670F8C00F6E395 /* SweetPauseView.swift */,
+				8699A4AB2D670F8C00F6E395 /* SweetPauseModel.swift */,
+				8699A4AC2D670F8C00F6E395 /* SweetPauseViewModel.swift */,
+			);
+			path = SweetPauseModule;
+			sourceTree = "<group>";
+		};
+		8699A4B02D671D4D00F6E395 /* UserDefaultsManager */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4B12D671D5600F6E395 /* UserDefaultsManager.swift */,
+			);
+			path = UserDefaultsManager;
+			sourceTree = "<group>";
+		};
+		8699A4B32D67320200F6E395 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4B42D67320500F6E395 /* AuidoManager */,
+				8699A4B02D671D4D00F6E395 /* UserDefaultsManager */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8699A4B42D67320500F6E395 /* AuidoManager */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4B82D67322600F6E395 /* Sounds */,
+				8699A4B72D67322300F6E395 /* Manager */,
+			);
+			path = AuidoManager;
+			sourceTree = "<group>";
+		};
+		8699A4B72D67322300F6E395 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4B52D67321500F6E395 /* AudioManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8699A4B82D67322600F6E395 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8699A4BB2D67427500F6E395 /* bg.mp3 */,
+				8699A4BA2D67427500F6E395 /* bonus.mp3 */,
+				8699A4B92D67427500F6E395 /* lose.mp3 */,
+				8699A4BC2D67427600F6E395 /* win.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +519,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8699A4C02D67427600F6E395 /* win.wav in Resources */,
+				865E2E352D63CB7F00945243 /* BowlbyOneSC-Regular.ttf in Resources */,
+				8699A4BD2D67427600F6E395 /* lose.mp3 in Resources */,
 				865E2E182D63CA2D00945243 /* Preview Assets.xcassets in Resources */,
+				8699A4BE2D67427600F6E395 /* bonus.mp3 in Resources */,
 				865E2E152D63CA2D00945243 /* Assets.xcassets in Resources */,
+				8699A4BF2D67427600F6E395 /* bg.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +536,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				865E2E132D63CA2C00945243 /* ContentView.swift in Sources */,
+				8699A4B62D67321500F6E395 /* AudioManager.swift in Sources */,
+				86490DD12D64A9F9005CAD91 /* SweetShopView.swift in Sources */,
+				86490DF42D64C3DB005CAD91 /* SweetDetailRecipeView.swift in Sources */,
+				86490DF52D64C3DB005CAD91 /* SweetDetailRecipeModel.swift in Sources */,
+				86490DF62D64C3DB005CAD91 /* SweetDetailRecipeViewModel.swift in Sources */,
+				86490DD22D64A9F9005CAD91 /* SweetShopModel.swift in Sources */,
+				86490DD32D64A9F9005CAD91 /* SweetShopViewModel.swift in Sources */,
+				86490DFB2D64CBB0005CAD91 /* SweetGameView.swift in Sources */,
+				86490DFC2D64CBB0005CAD91 /* SweetGameModel.swift in Sources */,
+				8650C4882D668FA200791893 /* SweetGameExtension.swift in Sources */,
+				8699A4A62D670E5200F6E395 /* SweetLoseView.swift in Sources */,
+				8699A4A72D670E5200F6E395 /* SweetLoseModel.swift in Sources */,
+				8699A4A82D670E5200F6E395 /* SweetLoseViewModel.swift in Sources */,
+				86490DFD2D64CBB0005CAD91 /* SweetGameViewModel.swift in Sources */,
+				86490DCA2D648962005CAD91 /* SweetSettingsView.swift in Sources */,
+				86490DCB2D648962005CAD91 /* SweetSettingsModel.swift in Sources */,
+				86490DCC2D648962005CAD91 /* SweetSettingsViewModel.swift in Sources */,
+				865E2E232D63CA7800945243 /* SweetCustomButtons.swift in Sources */,
 				865E2E112D63CA2C00945243 /* SweetyPathApp.swift in Sources */,
+				865E2E252D63CA7E00945243 /* SweetImageName.swift in Sources */,
+				865E2E2D2D63CADC00945243 /* SweetLoadingView.swift in Sources */,
+				865E2E3B2D63CF9900945243 /* SweetMenuView.swift in Sources */,
+				86490DDF2D64AF7A005CAD91 /* SweetIpgradesShopView.swift in Sources */,
+				86490DED2D64BD40005CAD91 /* SweetRecipeView.swift in Sources */,
+				8699A4982D670ADD00F6E395 /* SweetRulesView.swift in Sources */,
+				8699A4992D670ADD00F6E395 /* SweetRulesModel.swift in Sources */,
+				8699A49A2D670ADD00F6E395 /* SweetRulesViewModel.swift in Sources */,
+				86490DEE2D64BD40005CAD91 /* SweetRecipeModel.swift in Sources */,
+				86490DEF2D64BD40005CAD91 /* SweetRecipeViewModel.swift in Sources */,
+				86490DE02D64AF7A005CAD91 /* SweetIpgradesShopModel.swift in Sources */,
+				86490DE12D64AF7A005CAD91 /* SweetIpgradesShopViewModel.swift in Sources */,
+				865E2E3C2D63CF9900945243 /* SweetMenuModel.swift in Sources */,
+				865E2E3D2D63CF9900945243 /* SweetMenuViewModel.swift in Sources */,
+				86490DC32D64809A005CAD91 /* SweetLevelView.swift in Sources */,
+				86490DC42D64809A005CAD91 /* SweetLevelModel.swift in Sources */,
+				86490DC52D64809A005CAD91 /* SweetLevelViewModel.swift in Sources */,
+				865E2E312D63CB0400945243 /* SweetTextExtension.swift in Sources */,
+				865E2E2E2D63CADC00945243 /* SweetLoadingModel.swift in Sources */,
+				86490DE62D64B72E005CAD91 /* SweetHeartsShopView.swift in Sources */,
+				8699A49F2D670CC400F6E395 /* SweetWinView.swift in Sources */,
+				8699A4A02D670CC400F6E395 /* SweetWinModel.swift in Sources */,
+				8699A4A12D670CC400F6E395 /* SweetWinViewModel.swift in Sources */,
+				86490DE72D64B72E005CAD91 /* SweetHeartsShopModel.swift in Sources */,
+				8699A4B22D671D5600F6E395 /* UserDefaultsManager.swift in Sources */,
+				86490DE82D64B72E005CAD91 /* SweetHeartsShopViewModel.swift in Sources */,
+				865E2E2F2D63CADC00945243 /* SweetLoadingViewModel.swift in Sources */,
+				86490DD82D64AADA005CAD91 /* SweetBackgroundsShopView.swift in Sources */,
+				86490DD92D64AADA005CAD91 /* SweetBackgroundsShopModel.swift in Sources */,
+				8699A4AD2D670F8C00F6E395 /* SweetPauseView.swift in Sources */,
+				8699A4AE2D670F8C00F6E395 /* SweetPauseModel.swift in Sources */,
+				8699A4AF2D670F8C00F6E395 /* SweetPauseViewModel.swift in Sources */,
+				86490DDA2D64AADA005CAD91 /* SweetBackgroundsShopViewModel.swift in Sources */,
+				865E2E332D63CB1200945243 /* SweetTextOutlineExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +725,12 @@
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SweetyPath/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +755,12 @@
 				DEVELOPMENT_TEAM = 59WWFG63NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SweetyPath/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
