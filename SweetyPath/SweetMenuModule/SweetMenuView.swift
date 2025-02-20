@@ -77,7 +77,7 @@ struct SweetMenuView: View {
                         
                         Spacer(minLength: 20)
                         
-                        Text("SWEET PATH")
+                        Text("SWEETY PATH")
                             .Bowlby(size: 35)
                         
                         Spacer(minLength: 10)

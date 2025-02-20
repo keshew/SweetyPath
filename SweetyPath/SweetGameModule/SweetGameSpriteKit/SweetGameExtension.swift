@@ -16,6 +16,8 @@ extension SweetGameSpriteKit {
             let startableColors = [UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
                                    UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
                                    UIColor(red: 28/255, green: 111/255, blue: 73/255, alpha: 1)]
+            
+            let images = [SweetImageName.pinkItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.greenItem.rawValue]
             let startableValues = [2, 3, 2]
 
             let nonStartableColors = [UIColor(red: 62/255, green: 62/255, blue: 62/255, alpha: 1),
@@ -52,21 +54,21 @@ extension SweetGameSpriteKit {
                     if index == 0 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
                         
                     } else if index == 3 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
                         
                     } else if index == 10 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
                         
@@ -90,7 +92,8 @@ extension SweetGameSpriteKit {
             gridColumns = 5
             let blockSize = CGSize(width: 58, height: 58)
             let spacing: CGFloat = 10.0
-
+            
+            let images = [SweetImageName.brownItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.darkOrangeItem.rawValue]
             let startableColors = [UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
                 
                                    UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
@@ -142,31 +145,32 @@ extension SweetGameSpriteKit {
                     if index == 2 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                         
                     } else if index == 11 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 15 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 24 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -186,7 +190,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-
+            let images = [SweetImageName.grayItem.rawValue, SweetImageName.darkOrangeItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.brownItem.rawValue]
             let startableColors =  [UIColor(red: 166/255, green: 167/255, blue: 171/255, alpha: 1),
                                     UIColor(red: 158/255, green: 72/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
@@ -251,38 +255,38 @@ extension SweetGameSpriteKit {
                     if index == 1 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 17 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 20 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 25 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 33 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -303,7 +307,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-
+            let images = [SweetImageName.redItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.darkOrangeItem.rawValue, SweetImageName.greenItem.rawValue]
             let startableColors =  [UIColor(red: 105/255, green: 1/255, blue: 4/255, alpha: 1),
                                     UIColor(red: 166/255, green: 167/255, blue: 171/255, alpha: 1),
                                    UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
@@ -370,45 +374,45 @@ extension SweetGameSpriteKit {
                     if index == 2 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 13 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 21 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 23 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 28 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 30 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -429,7 +433,7 @@ extension SweetGameSpriteKit {
             gridColumns = 5
             let blockSize = CGSize(width: 58, height: 58)
             let spacing: CGFloat = 10.0
-
+            let images = [SweetImageName.darkOrangeItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.redItem.rawValue, SweetImageName.grayItem.rawValue]
             let startableColors = [UIColor(red: 158/255, green: 72/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
                 
@@ -484,45 +488,45 @@ extension SweetGameSpriteKit {
                     if index == 2 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 8 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 11 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 17 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 20 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 24 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -543,7 +547,7 @@ extension SweetGameSpriteKit {
             gridColumns = 5
             let blockSize = CGSize(width: 58, height: 58)
             let spacing: CGFloat = 10.0
-
+            let images = [SweetImageName.darkOrangeItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.redItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.pinkItem.rawValue]
             let startableColors = [UIColor(red: 158/255, green: 72/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 28/255, green: 111/255, blue: 73/255, alpha: 1),
                                    UIColor(red: 105/255, green: 1/255, blue: 4/255, alpha: 1),
@@ -597,45 +601,45 @@ extension SweetGameSpriteKit {
                     if index == 0 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 6 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 9 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 18 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 22 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 23 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -656,7 +660,7 @@ extension SweetGameSpriteKit {
             gridColumns = 5
             let blockSize = CGSize(width: 58, height: 58)
             let spacing: CGFloat = 10.0
-
+            let images = [SweetImageName.pinkItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.redItem.rawValue, SweetImageName.greenItem.rawValue]
             let startableColors = [UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
                                    UIColor(red: 166/255, green: 167/255, blue: 171/255, alpha: 1),
                                    UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
@@ -708,38 +712,38 @@ extension SweetGameSpriteKit {
                     if index == 3 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 5 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 12 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 19 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else if index == 22 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 58, height: 58))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -760,7 +764,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-            
+            let images = [SweetImageName.brownItem.rawValue, SweetImageName.redItem.rawValue, SweetImageName.orangeItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.darkOrangeItem.rawValue]
             let startableColors = [UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
                                    UIColor(red: 105/255, green: 1/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 218/255, green: 72/255, blue: 4/255, alpha: 1),
@@ -828,52 +832,52 @@ extension SweetGameSpriteKit {
                     if index == 0 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 4 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 9 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 18 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 20 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 31 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 35 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -894,7 +898,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-            
+            let images = [SweetImageName.greenItem.rawValue, SweetImageName.orangeItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.redItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.darkOrangeItem.rawValue]
             let startableColors = [UIColor(red: 28/255, green: 111/255, blue: 73/255, alpha: 1),
                                    UIColor(red: 218/255, green: 72/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
@@ -964,52 +968,52 @@ extension SweetGameSpriteKit {
                     if index == 6 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 11 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 14 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 16 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 25 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 27 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 35 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -1030,7 +1034,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-            
+            let images = [SweetImageName.pinkItem.rawValue, SweetImageName.darkOrangeItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.orangeItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.redItem.rawValue]
             let startableColors = [UIColor(red: 211/255, green: 34/255, blue: 148/255, alpha: 1),
                                    UIColor(red: 158/255, green: 72/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 166/255, green: 167/255, blue: 171/255, alpha: 1),
@@ -1097,52 +1101,52 @@ extension SweetGameSpriteKit {
                     if index == 1 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 3 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 11 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 14 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 29 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 30 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 33 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -1163,7 +1167,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-            
+            let images = [SweetImageName.redItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.grayItem.rawValue, SweetImageName.orangeItem.rawValue, SweetImageName.brownItem.rawValue]
             let startableColors = [UIColor(red: 105/255, green: 1/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 28/255, green: 111/255, blue: 73/255, alpha: 1),
                                    UIColor(red: 166/255, green: 167/255, blue: 171/255, alpha: 1),
@@ -1228,38 +1232,38 @@ extension SweetGameSpriteKit {
                     if index == 1 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 10 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 25 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 29 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 30 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)
@@ -1280,7 +1284,7 @@ extension SweetGameSpriteKit {
             gridColumns = 6
             let blockSize = CGSize(width: 48, height: 49)
             let spacing: CGFloat = 10.0
-            
+            let images = [SweetImageName.redItem.rawValue, SweetImageName.brownItem.rawValue, SweetImageName.orangeItem.rawValue, SweetImageName.pinkItem.rawValue, SweetImageName.greenItem.rawValue, SweetImageName.darkOrangeItem.rawValue, SweetImageName.grayItem.rawValue]
             let startableColors = [UIColor(red: 105/255, green: 1/255, blue: 4/255, alpha: 1),
                                    UIColor(red: 51/255, green: 26/255, blue: 25/255, alpha: 1),
                                    UIColor(red: 218/255, green: 72/255, blue: 4/255, alpha: 1),
@@ -1347,52 +1351,52 @@ extension SweetGameSpriteKit {
                     if index == 0 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 3 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 5 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 13 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 20 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else if index == 28 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     }  else if index == 32 {
                         let color = startableColors[startableIndex]
                         let value = startableValues[startableIndex]
-                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true)
+                        block = ColorBlock(color: color, value: value, size: blockSize, isStartable: true, isLinePassable: true, imageName: images[startableIndex])
                         block.zPosition = 10
                         startableIndex += 1
-                        
+                        block.resizeImage(newSize: CGSize(width: 48, height: 49))
                     } else {
                         let color = nonStartableColors[index]
                         let isBlack = color == UIColor(red: 179/255, green: 119/255, blue: 219/255, alpha: 1)

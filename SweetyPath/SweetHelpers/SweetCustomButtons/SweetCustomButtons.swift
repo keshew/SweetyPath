@@ -108,6 +108,8 @@ struct EquipedBGItem: View {
     var geometry: GeometryProxy
     var image: String
     var text: String
+    var textButton: String
+    var action: (() -> ())
     var body: some View {
         ZStack {
             Rectangle()
@@ -135,14 +137,18 @@ struct EquipedBGItem: View {
                HStack(spacing: 0) {
                    Spacer()
                    
-                   ZStack {
-                       Image(.wideBackButton)
-                           .resizable()
-                           .frame(width: geometry.size.width * 0.255,
-                                  height: geometry.size.height * 0.048)
-                       
-                       Text("EQUIPED")
-                           .Bowlby(size: 14)
+                   Button(action: {
+                       action()
+                   }) {
+                       ZStack {
+                           Image(.wideBackButton)
+                               .resizable()
+                               .frame(width: geometry.size.width * 0.255,
+                                      height: geometry.size.height * 0.048)
+                           
+                           Text(textButton)
+                               .Bowlby(size: 14)
+                       }
                    }
                    .padding(.trailing, 10)
                }

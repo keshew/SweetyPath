@@ -26,8 +26,9 @@ class ColorBlock: SKSpriteNode {
     var isLinePassable: Bool
     var hasLine: Bool = false
     private var labelNode: SKLabelNode?
+    private var imageNode: SKSpriteNode?
 
-    init(color: UIColor, value: Int?, size: CGSize, isStartable: Bool, isLinePassable: Bool = true) {
+    init(color: UIColor, value: Int?, size: CGSize, isStartable: Bool, isLinePassable: Bool = true, imageName: String? = nil) {
         self.colorValue = value
         self.currentValue = value
         self.isStartable = isStartable
@@ -39,15 +40,27 @@ class ColorBlock: SKSpriteNode {
         if let value = value {
             labelNode = SKLabelNode(fontNamed: "BowlbyOneSC-Regular")
             labelNode?.text = "\(value)"
+            labelNode?.zPosition = 3 
             labelNode?.fontSize = 23
             labelNode?.fontColor = .white
             labelNode?.position = CGPoint(x: 0, y: -10)
             addChild(labelNode!)
         }
+
+        if let imageName = imageName {
+            imageNode = SKSpriteNode(imageNamed: imageName)
+            imageNode?.size = CGSize(width: 73, height: 73)
+            imageNode?.position = CGPoint(x: 0, y: 0) 
+            addChild(imageNode!)
+        }
     }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    func resizeImage(newSize: CGSize) {
+        imageNode?.size = newSize
     }
 
     private func updateLabel() {
@@ -63,6 +76,8 @@ class ColorBlock: SKSpriteNode {
         addChild(outline)
     }
 }
+
+
 
 class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
     var game: SweetGameData?
@@ -83,7 +98,7 @@ class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
     }
 
     func createMainObject() {
-        let gameBackground = SKSpriteNode(imageNamed: UserDefaultsManager().getRandomImage() ?? SweetImageName.mainBackground.rawValue)
+        let gameBackground = SKSpriteNode(imageNamed: UserDefaultsManager().getSelectedPotImage() ?? SweetImageName.mainBackground.rawValue)
         gameBackground.size = CGSize(width: size.width, height: size.height)
         gameBackground.position = CGPoint(x: size.width / 2, y: size.height / 2)
         addChild(gameBackground)

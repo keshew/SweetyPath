@@ -25,7 +25,8 @@ public enum SweetImageName: String {
     case timeImage
     case backCountBonus
     case backBonus
-    case brownItem, greenItem, pinkItem
+    case brownItem, greenItem, pinkItem, darkOrangeItem, grayItem, redItem, orangeItem
     case cloudBack
     case woman2
+    case castleBG, houseBG, roadBG, villageBG
 }

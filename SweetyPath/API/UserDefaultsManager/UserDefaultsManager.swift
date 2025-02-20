@@ -9,20 +9,104 @@ enum Keys: String {
     case firstItems = "firstItems"
     case collectionItem = "collectionItem"
     case soundEffectVolume = "soundEffectVolume"
+    case shopItems = "shopItems"
 }
-
 
 class UserDefaultsManager: ObservableObject {
     static let defaults = UserDefaults.standard
     @Published var collectionItem: [Recipe] = []
     @Published var images: [String] = []
-    
+    @Published var shopItems = [ShopItemModel(text: "CASTLE", image: SweetImageName.bg1.rawValue, bgImage: SweetImageName.castleBG.rawValue, isSelected: false, isAvailible: false),
+                                ShopItemModel(text: "ROAD", image: SweetImageName.bg2.rawValue ,bgImage: SweetImageName.roadBG.rawValue, isSelected: false, isAvailible: false),
+                                    ShopItemModel(text: "VILLAGE", image: SweetImageName.bg3.rawValue, bgImage: SweetImageName.villageBG.rawValue, isSelected: false, isAvailible: false),
+                                    ShopItemModel(text: "HOUSE", image: SweetImageName.bg4.rawValue, bgImage: SweetImageName.houseBG.rawValue, isSelected: false, isAvailible: false)]
     init() {
         loadCollectionItems()
-        loadImages()
         firstLaunch()
+        
+        if let savedItems = loadShoItems() {
+            self.shopItems = savedItems
+        }
     }
     
+    func loadShoItems() -> [ShopItemModel]? {
+        if let savedItemsData = UserDefaultsManager.defaults.data(forKey: Keys.shopItems.rawValue) {
+            let decoder = JSONDecoder()
+            if let loadedShopItems = try? decoder.decode([ShopItemModel].self, from: savedItemsData) {
+                return loadedShopItems
+            }
+        }
+        return nil
+    }
+    
+    func saveShopItems(array: [ShopItemModel]) {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(array) {
+            UserDefaultsManager.defaults.set(encoded, forKey: Keys.shopItems.rawValue)
+        }
+    }
+    
+    func saveShopItems() {
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(shopItems) {
+            UserDefaultsManager.defaults.set(encoded, forKey: Keys.shopItems.rawValue)
+        }
+    }
+    
+    func getSelectedPotImage() -> String? {
+        for shopItem in shopItems {
+            if shopItem.isSelected {
+                return shopItem.bgImage
+            }
+        }
+        return nil
+    }
+    
+    func manageShopItem(at index: Int) {
+        guard index >= 0 && index < shopItems.count else { return }
+        
+        var selectedItem = shopItems[index]
+        
+        if selectedItem.isSelected {
+            return
+        }
+        
+        if selectedItem.isAvailible {
+            for i in 0..<shopItems.count {
+                if shopItems[i].isSelected {
+                    shopItems[i].isSelected = false
+                    shopItems[i].isAvailible = true
+                    break
+                }
+            }
+            
+            selectedItem.isSelected = true
+            selectedItem.isAvailible = false
+            
+        } else {
+            let countOfMoney = UserDefaultsManager.defaults.integer(forKey: Keys.money.rawValue)
+            if countOfMoney >= 30 {
+                selectedItem.isAvailible = true
+                
+                for i in 0..<shopItems.count {
+                    if shopItems[i].isSelected {
+                        shopItems[i].isSelected = false
+                        shopItems[i].isAvailible = true
+                        break
+                    }
+                }
+                
+                selectedItem.isSelected = true
+                selectedItem.isAvailible = false
+                
+                UserDefaultsManager.defaults.set(countOfMoney - 30, forKey: Keys.money.rawValue)
+            }
+        }
+        
+        shopItems[index] = selectedItem
+        saveShopItems()
+    }
+
     private func defaultRecipes() -> [Recipe] {
         return [Recipe(image: SweetImageName.recipe1.rawValue,
                        name: "Golden Harvest Crumble",
@@ -96,6 +180,7 @@ class UserDefaultsManager: ObservableObject {
             
             collectionItem = defaultRecipes()
             saveCollectionItems()
+            saveShopItems(array: shopItems)
         }
     }
     
@@ -159,34 +244,6 @@ class UserDefaultsManager: ObservableObject {
             collectionItem = defaultRecipes()
         }
         
-        objectWillChange.send()
-    }
-    
-    func addImage(_ imageName: String) {
-        let money = UserDefaults.standard.object(forKey: Keys.money.rawValue) as? Int ?? 0
-        if money >= 30 {
-            images.append(imageName)
-            saveImages()
-            UserDefaultsManager.defaults.set(money - 30, forKey: Keys.money.rawValue)
-        }
-    }
-    
-    func containsImage(named imageName: String) -> Bool {
-        return images.contains(imageName)
-    }
-    
-    func getRandomImage() -> String? {
-        guard !images.isEmpty else { return nil }
-        return images.randomElement()
-    }
-    
-    func saveImages() {
-        UserDefaults.standard.set(images, forKey: "savedImages")
-        objectWillChange.send()
-    }
-    
-    func loadImages() {
-        images = UserDefaults.standard.array(forKey: "savedImages") as? [String] ?? []
         objectWillChange.send()
     }
     

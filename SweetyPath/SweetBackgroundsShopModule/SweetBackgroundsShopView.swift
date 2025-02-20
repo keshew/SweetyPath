@@ -3,6 +3,12 @@ import SwiftUI
 struct SweetBackgroundsShopView: View {
     @StateObject var sweetBackgroundsShopModel =  SweetBackgroundsShopViewModel()
     @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var buyModel = UserDefaultsManager()
+    @State var test = 1
+    let columns: [GridItem] = [
+           GridItem(.flexible(), spacing: -20),
+           GridItem(.flexible(), spacing: -20)
+       ]
     
     var body: some View {
         GeometryReader { geometry in
@@ -88,58 +94,37 @@ struct SweetBackgroundsShopView: View {
                         Spacer(minLength: 30)
                         
                         VStack(spacing: 50) {
-                            HStack(spacing: 20) {
-                                if UserDefaultsManager().containsImage(named: "castleBG") {
-                                    EquipedBGItem(geometry: geometry,
-                                                  image: SweetImageName.bg1.rawValue,
-                                                  text: "CASTLE")
-                                } else {
-                                    ShopBackgroundItem(geometry: geometry,
-                                                       image: SweetImageName.bg1.rawValue,
-                                                       text: "CASTLE") {
-                                        UserDefaultsManager().addImage("castleBG")
-                                        sweetBackgroundsShopModel.again = 1
-                                    }
-                                }
-                                
-                                if UserDefaultsManager().containsImage(named: "roadBG") {
-                                    EquipedBGItem(geometry: geometry,
-                                                  image: SweetImageName.bg2.rawValue,
-                                                  text: "ROAD")
-                                } else {
-                                    ShopBackgroundItem(geometry: geometry,
-                                                       image: SweetImageName.bg2.rawValue,
-                                                       text: "ROAD") {
-                                        UserDefaultsManager().addImage("roadBG")
-                                        sweetBackgroundsShopModel.again = 1
-                                    }
-                                }
-                            }
-                            
-                            HStack(spacing: 20) {
-                                if UserDefaultsManager().containsImage(named: "villageBG") {
-                                    EquipedBGItem(geometry: geometry,
-                                                  image: SweetImageName.bg3.rawValue,
-                                                  text: "VILLAGE")
-                                } else {
-                                    ShopBackgroundItem(geometry: geometry,
-                                                       image: SweetImageName.bg3.rawValue,
-                                                       text: "VILLAGE") {
-                                        UserDefaultsManager().addImage("villageBG")
-                                        sweetBackgroundsShopModel.again = 1
-                                    }
-                                }
-                                
-                                if UserDefaultsManager().containsImage(named: "houseBG") {
-                                    EquipedBGItem(geometry: geometry,
-                                                  image: SweetImageName.bg4.rawValue,
-                                                  text: "HOUSE")
-                                } else {
-                                    ShopBackgroundItem(geometry: geometry,
-                                                       image: SweetImageName.bg4.rawValue,
-                                                       text: "HOUSE") {
-                                        UserDefaultsManager().addImage("houseBG")
-                                        sweetBackgroundsShopModel.again = 1
+                            VStack(spacing: 20) {
+                                LazyVGrid(columns: columns, spacing: 30) {
+                                    ForEach(buyModel.shopItems.indices, id: \.self) { index in
+                                        let item = buyModel.shopItems[index]
+                                        
+                                        if item.isAvailible {
+                                            EquipedBGItem(geometry: geometry,
+                                                          image: item.image,
+                                                          text: item.text,
+                                                          textButton: "EQUIP") {
+                                                sweetBackgroundsShopModel.again = 1
+                                                test = 1
+                                                buyModel.manageShopItem(at: index)
+                                            }
+                                        } else if item.isSelected {
+                                            EquipedBGItem(geometry: geometry,
+                                                          image: item.image,
+                                                          text: item.text,
+                                                          textButton: "EQUIPED") {
+                                                sweetBackgroundsShopModel.again = 1
+                                                test = 1
+                                            }
+                                        } else {
+                                            ShopBackgroundItem(geometry: geometry,
+                                                               image: item.image,
+                                                               text: item.text) {
+                                                sweetBackgroundsShopModel.again = 1
+                                                buyModel.manageShopItem(at: index)
+                                                test = 1
+                                            }
+                                        }
                                     }
                                 }
                             }

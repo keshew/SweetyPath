@@ -20,7 +20,7 @@ struct SweetSettingsView: View {
                             Image(.menu)
                                 .resizable()
                                 .frame(width: 62, height: 77)
-                                .padding(.leading)
+                                .padding(.leading, 25)
                         }
                         
                         Spacer()
