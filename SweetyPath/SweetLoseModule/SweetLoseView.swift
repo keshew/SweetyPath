@@ -3,6 +3,7 @@ import SwiftUI
 struct SweetLoseView: View {
     @StateObject var sweetLoseModel =  SweetLoseViewModel()
     @ObservedObject var audioManager = AudioManager.shared
+    var level: Int
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -103,7 +104,7 @@ struct SweetLoseView: View {
                            height: geometry.size.height * 0.44)
                     .position(x: geometry.size.width / 1.55, y: geometry.size.height / 1.15)
                 
-                NavigationLink(destination: SweetGameView()) {
+                NavigationLink(destination: SweetGameView(level: level)) {
                     ZStack {
                         Image(.wideBackButton)
                             .resizable()
@@ -144,6 +145,6 @@ struct SweetLoseView: View {
 }
 
 #Preview {
-    SweetLoseView()
+    SweetLoseView(level: 1)
 }
 

@@ -5,7 +5,7 @@ struct LevelPin: View {
     var geometry: GeometryProxy
     var body: some View {
         if UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as! Int == Int(text) ?? 0 {
-            NavigationLink(destination: SweetGameView()) {
+            NavigationLink(destination: SweetGameView(level: Int(text) ?? 1)) {
                 ZStack {
                     Image(.currentLevel)
                         .resizable()
@@ -16,13 +16,15 @@ struct LevelPin: View {
                 }
             }
         } else if UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as! Int > Int(text) ?? 0 {
-            ZStack {
-                Image(SweetImageName.doneLevel.rawValue)
-                    .resizable()
-                    .frame(width: geometry.size.width * 0.19, height: geometry.size.width * 0.19)
-                
-                Text(text)
-                    .Bowlby(size: 25)
+            NavigationLink(destination: SweetGameView(level: Int(text) ?? 1)) {
+                ZStack {
+                    Image(SweetImageName.doneLevel.rawValue)
+                        .resizable()
+                        .frame(width: geometry.size.width * 0.19, height: geometry.size.width * 0.19)
+                    
+                    Text(text)
+                        .Bowlby(size: 25)
+                }
             }
         } else {
             ZStack {

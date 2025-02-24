@@ -91,6 +91,16 @@ class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
     var currentDirection: Direction?
     var timer: Timer!
     var  bonusCountLabel: SKLabelNode!
+    let level: Int
+    
+    init(level: Int) {
+        self.level = level
+        super.init(size: UIScreen.main.bounds.size)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func setupView() {
         createMainObject()
@@ -179,7 +189,7 @@ class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
         addChild(board)
 
         let levelLabel = SKLabelNode(fontNamed: "BowlbyOneSC-Regular")
-        levelLabel.attributedText = NSAttributedString(string: "LEVEL \(UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as? Int ?? 0)", attributes: [
+        levelLabel.attributedText = NSAttributedString(string: "LEVEL \(level)", attributes: [
             NSAttributedString.Key.font: UIFont(name: "BowlbyOneSC-Regular", size: 35)!,
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.strokeColor: UIColor(red: 250/255, green: 40/255, blue: 85/255, alpha: 1),
@@ -327,7 +337,6 @@ class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
 
         if allBlocksZero {
             game?.isWin = true
-            UserDefaultsManager().completeLevel()
             timer.invalidate()
         }
     }
@@ -452,10 +461,10 @@ class SweetGameSpriteKit: SKScene, SKPhysicsContactDelegate {
 struct SweetGameView: View {
     @StateObject var sweetGameModel =  SweetGameViewModel()
     @StateObject var gameModel = SweetGameData()
-    
+    var level: Int
     var body: some View {
         ZStack {
-            SpriteView(scene: sweetGameModel.createSweetGameScene(gameData: gameModel))
+            SpriteView(scene: sweetGameModel.createSweetGameScene(gameData: gameModel, level: level))
                 .ignoresSafeArea()
                 .navigationBarBackButtonHidden(true)
             
@@ -468,18 +477,18 @@ struct SweetGameView: View {
             }
             
             if gameModel.isWin {
-                SweetWinView()
+                SweetWinView(level: level)
             }
             
             if gameModel.isLose {
-                SweetLoseView()
+                SweetLoseView(level: level)
             }
         }
     }
 }
 
 #Preview {
-    SweetGameView()
+    SweetGameView(level: 1)
 }
 
 extension SKShapeNode {

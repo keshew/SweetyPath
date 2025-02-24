@@ -6,7 +6,7 @@ extension SweetGameSpriteKit {
         var gridRows = 4
         var gridColumns = 4
         
-        switch UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as? Int ?? 1 {
+        switch level {
         case 1:
             gridRows = 4
             gridColumns = 4

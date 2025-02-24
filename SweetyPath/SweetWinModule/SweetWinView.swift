@@ -3,6 +3,7 @@ import SwiftUI
 struct SweetWinView: View {
     @StateObject var sweetWinModel =  SweetWinViewModel()
     @ObservedObject var audioManager = AudioManager.shared
+    var level: Int
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -76,7 +77,7 @@ struct SweetWinView: View {
                                     Text("CONGRATULATION!")
                                         .Bowlby(size: 25, outlineWidth: 0.5)
                                     
-                                    Text("YOUR WINNINGS:")
+                                    Text("YOUR WININGS:")
                                         .Bowlby(size: 20, outlineWidth: 0.5)
                                 }
                                 HStack {
@@ -88,13 +89,15 @@ struct SweetWinView: View {
                                         .frame(width: 37, height: 37)
                                 }
                                 
-                                VStack(spacing: 5) {
-                                    Text("NEW RECIPE!")
-                                        .Bowlby(size: 20, outlineWidth: 0.5)
-                                    
-                                    Image(UserDefaultsManager().getRandomAndOpenItem()!.image)
-                                        .resizable()
-                                        .frame(width: 68, height: 63)
+                                if level == (UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as? Int ?? 0) {
+                                    VStack(spacing: 5) {
+                                        Text("NEW RECIPE!")
+                                            .Bowlby(size: 20, outlineWidth: 0.5)
+                                        
+                                        Image(UserDefaultsManager().getRandomAndOpenItem()!.image)
+                                            .resizable()
+                                            .frame(width: 68, height: 63)
+                                    }
                                 }
                             }
                             .offset(y: -geometry.size.height * 0.056)
@@ -109,7 +112,7 @@ struct SweetWinView: View {
                     .position(x: geometry.size.width / 1.5, y: geometry.size.height / 1.15)
                 
                 if UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as? Int ?? 0 <= 12 {
-                    NavigationLink(destination: SweetGameView()) {
+                    NavigationLink(destination: SweetGameView(level: level + 1)) {
                         ZStack {
                             Image(.wideBackButton)
                                 .resizable()
@@ -121,8 +124,6 @@ struct SweetWinView: View {
                         }
                     }
                     .position(x: geometry.size.width / 3.3, y: geometry.size.height / 1.4)
-                } else {
-                    
                 }
                 
                 NavigationLink(destination: SweetMenuView()) {
@@ -142,6 +143,10 @@ struct SweetWinView: View {
             .onAppear {
                 audioManager.stopMenuMusic()
                 audioManager.playWinMusic()
+                
+                if level == UserDefaultsManager.defaults.object(forKey: Keys.currentLevel.rawValue) as? Int ?? 0 {
+                    UserDefaultsManager().completeLevel()
+                }
             }
             
             .onDisappear {
@@ -153,6 +158,6 @@ struct SweetWinView: View {
 }
 
 #Preview {
-    SweetWinView()
+    SweetWinView(level: 1)
 }
 
